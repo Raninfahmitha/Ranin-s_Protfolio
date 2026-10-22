@@ -1,0 +1,52 @@
+2026-10-22T06:51:50.199Z INFO Is remote: false
+2026-10-22T06:51:50.200Z INFO Starting Local. Installation path: c:\Users\rabik\Downloads
+2026-10-22T06:51:50.202Z INFO [MainProvider] Creating new MainProvider instance...
+2026-10-22T06:51:50.205Z INFO [TabsManager] Code view listener set up at initialization
+2026-10-22T06:51:50.207Z INFO Installation path exists: c:\Users\rabik\Downloads
+2026-10-22T06:51:50.208Z INFO Initializing database with URL: file:c:\Users\rabik\Downloads\pythagora-core\data\database\pythagora.db
+2026-10-22T06:51:50.225Z INFO Database file exists, skipping prisma generate/push for faster startup
+2026-10-22T06:51:50.226Z INFO Database initialized successfully
+2026-10-22T06:51:50.227Z INFO [Migration] Checking for database migration...
+2026-10-22T06:51:50.337Z INFO [TabsManager] First file opened, triggering split view
+2026-10-22T06:51:50.338Z INFO [MainProvider] First file opened, creating split view
+2026-10-22T06:51:50.414Z INFO [Migration] No migration needed
+2026-10-22T06:51:50.794Z INFO [TabsManager] First file opened, triggering split view
+2026-10-22T06:51:50.795Z INFO [MainProvider] First file opened, creating split view
+2026-10-22T06:53:15.557Z INFO [TabsManager] First file opened, triggering split view
+2026-10-22T06:53:15.558Z INFO [MainProvider] First file opened, creating split view
+2026-10-22T06:54:22.894Z INFO [TabsManager] First file opened, triggering split view
+2026-10-22T06:54:22.895Z INFO [MainProvider] First file opened, creating split view
+2026-10-22T06:54:54.366Z INFO [TabsManager] First file opened, triggering split view
+2026-10-22T06:54:54.367Z INFO [MainProvider] First file opened, creating split view
+2026-10-22T06:57:26.796Z INFO [TabsManager] First file opened, triggering split view
+2026-10-22T06:57:26.796Z INFO [MainProvider] First file opened, creating split view
+2026-10-22T07:05:26.942Z INFO Closing entire Pythagora extension...
+2026-10-22T07:05:26.950Z ERROR Error closing extension
+Error: Canceled
+Stack: Canceled: Canceled
+	at new mC (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:154627)
+	at r._remoteCall (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:160711)
+	at Proxy.<anonymous> (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:32:157464)
+	at ph._doExecuteCommand (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:48836)
+	at ph.executeCommand (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:48283)
+	at Object.executeCommand (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:296:143023)
+	at closeEntirePythagoraExtension (c:\Users\rabik\.vscode\extensions\pythagoratechnologies.pythagora-vs-code-2.6.19\out\extension.js:542:31)
+	at Object.deactivate (c:\Users\rabik\.vscode\extensions\pythagoratechnologies.pythagora-vs-code-2.6.19\out\extension.js:409:15)
+	at tD._deactivate (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:169:14695)
+	at file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:169:12222
+	at Array.map (<anonymous>)
+	at tD._deactivateAll (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:169:12210)
+	at tD.terminate (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:169:12561)
+	at r.terminate (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:1076)
+	at ja (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:475:11797)
+	at Tm.value (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:475:9939)
+	at E._deliver (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:28:3644)
+	at E.fire (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:28:3962)
+	at ea.fire (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:8627)
+	at MessagePortMain.<anonymous> (file:///c:/Users/rabik/AppData/Local/Programs/Microsoft%20VS%20Code/2d0b7506a3/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:475:8171)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain.emit (node:domain:489:12)
+	at Object.emit (node:electron/js2c/utility_init:2:2934)
+Extra context: {
+  "message": "Canceled"
+}

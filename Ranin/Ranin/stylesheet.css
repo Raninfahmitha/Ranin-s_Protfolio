@@ -1,0 +1,882 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: peachpuff;
+    background: plum
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 35px;
+    color: rgb(245, 165, 61);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 1;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: peachpuff;
+    text-decoration: none;
+    font-weight: 100;
+    margin-left: 35px;
+    transition: .5s;
+    opacity: 1;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: brown;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensures the home section takes full viewport height */
+    background: url('/assests/download1.jpg'); /* Your existing background image */
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Makes .home a flex container */
+    align-items: center; /* Vertically centers items within .home */
+    justify-content: space-around; /* Distributes space around items, pushing them outwards */
+    padding: 70px 10% 0; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+.home-content {
+    max-width: 600px; /* Keep your existing max-width for the text content */
+    flex: 1; /* Allows this content to grow and shrink */
+    padding-right: 20px; 
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0; /* Set initial opacity to 0 for animation */
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    opacity: 0; /* Set initial opacity to 0 for animation */
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s; 
+}
+
+.home-content h3 span {
+    color: blueviolet;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.2s;
+}
+.home-sci {
+    margin: 30px 0; /* Add margin to separate from paragraph and button */
+}
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px; /* Ensure height is defined for circular shape */
+    background: transparent;
+    border: 2px solid palevioletred;
+    border-radius: 50%; /* Make icons circular */
+    font-size: 20px;
+    color: blueviolet;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0; /* Set initial opacity to 0 for animation */
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i) + 1.5s); /* Adjust delay for social icons */
+    margin: 0 15px 0 0; 
+}
+
+.home-sci a:hover {
+    background: rgb(255, 137, 2);
+    color: black;
+    box-shadow: 0 0 20px purple;
+}
+.home-img {
+    flex: 1; /* Allows the image container to grow and shrink */
+    display: flex;
+    justify-content: center; /* Center the image horizontally within its container */
+    align-items: center; /* Center the image vertically within its container */
+    max-width: 500px; /* Limit the max width of the image container */
+    padding-left: 20px; /* Add space between text and image containers */
+}
+
+.home-img img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgb(249, 173, 106);
+    box-shadow: 0 0 20px purple, 0 0 40px plum;
+    opacity: 0;
+    animation: slideInImage 1s ease forwards;
+    animation-delay: 1.8s;
+    object-position: top;
+}
+
+/* Define a new keyframe animation for the image */
+@keyframes slideInImage {
+    0% {
+        transform: translateX(100px) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(190, 2, 190);
+    border-radius: 25px;
+    font-size: 16px;
+    color: peachpuff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px burlywood;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px purple;
+}
+.about{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   align-items: center;
+   gap: 1.5rem;
+   padding: 50px 10%;
+}
+.about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-img img{
+    width: 300px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 4px solid peachpuff;
+    box-shadow: 0 0 20px blueviolet;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: rgb(147, 55, 233);
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: rgb(140, 10, 145);
+    line-height: 1.7;
+    margin: 15px 0 30px;
+} 
+.about-text p{
+    color: beige;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.bx {
+    color: antiquewhite;
+}
+#services{
+    color:aqua;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+#skills {
+    background-color:#181344;/* New background color */
+    color: #00f9ff; /* Optional: Change text color if needed */
+    font-size: 20px;
+     min-height: 100vh;
+    line-height: 1.6;
+    margin-bottom: 10rem;
+    height: auto;
+}
+
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.services-list div {
+    background: url('assests/purple.jpg') no-repeat center center/cover;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 
+        1px 1px 20px #012290f7,
+        1px 1px 40px #0053b8f7;
+    position: relative;
+    color: aqua;
+}
+
+.services-list div i {
+font-size: 50px;
+margin-bottom: 30px;
+}
+.services-list div h2{
+font-size: 30px;
+font-weight: 500;
+margin-bottom: 15px;
+}
+
+.services-list div a{
+text-decoration: none;
+color: #000000;
+font-size: 12px;
+margin-top: 20px;
+display: inline-block;
+}
+.read{
+display: inline-block;
+padding: 12px 28px;
+background:#0ef;
+border-radius: 40px;
+font-size: 16px;
+color: #081b29;
+letter-spacing: 1px;
+text-decoration: none;
+font-weight: 600;
+opacity: 0;
+animation: slideTop 1s ease forwards;
+animation-delay: 2s;
+box-shadow: 0 0 5px burlywood,
+        0 0 25px burlywood;
+}
+.read:hover {
+    box-shadow:
+        0 0 5px cyan,
+        0 0 25px cyan,
+        0 0 50px rgb(88, 241, 241),
+        0 0 100px rgb(148, 218, 246),
+        0 0 200px rgb(88, 168, 234);
+}
+.services-list div:hover{
+transform: translateY(-10px);
+}
+
+.containers {
+  padding: 90px 10%;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.heading1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 4px;
+}
+body.skills-page-body {
+    background: #181344; /* Dark blue background */
+    color: peachpuff; /* Ensure text is readable */
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+}
+.skill-bar {
+  margin-bottom: 25px;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.skill-bar .label {
+  flex: 0 0 260px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: whitesmoke;
+}
+.skill-bar .label i.bxl-git {
+  color: #ff5722; 
+  font-size: 35px;
+}
+.skill-bar .label i.bx-brain {
+  color: #8e44ad;
+  font-size: 35px; 
+}
+.skill-bar .label i.bxl-python {
+  color: #306998;
+  font-size: 35px;
+}
+.skill-bar .label i.bxl-nodejs {
+  color:green;
+  font-size: 35px;
+}
+.skill-bar .label i.bxl-react {
+  color: #61dafb;
+  font-size: 35px; 
+}
+
+.progress-line {
+  flex: 1;                    /* grow to available space … */
+  max-width: 650px;           /* … but never exceed this width   */
+  height: 8px;                /* (slimmer bar optional)          */
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-line span {
+  display: block;
+  height: 100%;
+  background: #00f9ff;
+  border-radius: 10px;
+  transition: width 2s ease-in-out;
+}
+.skills-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.technical-skills {
+  width: 100%;
+}
+
+.skill-bar {
+  width: 100%;
+}
+
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 60%; }
+.progress-line.javascript span { width: 85%; }
+.progress-line.python span { width: 50%; }
+.progress-line.react span { width: 75%; }
+.progress-line span::after {
+  content: attr(data-percent);
+  position: absolute;
+  top: -28px;
+  right: 0;
+  background: #000;
+  color: #e90f0f;
+  padding: 3px 7px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+@keyframes fillBar {
+  0% { width: 0; }
+  100% { width: 90%; }
+}
+
+.progress-line span::before{
+content: "";
+position: absolute;
+width: 0;
+height: 0;
+border: 7px solid transparent;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-color: #000;
+top: -10px;
+right: 0;
+animation: showText 0.5s 1.5s linear forwards;
+opacity: 0;
+}
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background: transparent;
+}
+@keyframes showText{
+100%{
+    opacity: 1;
+}
+}
+.radial-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 0; /* REMOVE padding gap conflict */
+  padding: 60px 40px;
+  background-color: #181344; /* Match the skills section */
+  border-top: 2px solid #2a2062; /* Optional visual break */
+  border-radius: 0
+}
+.radial-bar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+.radial-bar svg {
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+.radial-bar circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.radial-bar .progress-bar {
+  stroke: #111;
+}
+
+.radial-bar .path {
+  stroke: rgb(221, 211, 67);
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 22px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.radial-bar .text {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #fff;
+}
+body.contact-page-body {
+    background: #181344; /* Dark blue background */
+    color: peachpuff; /* Keep text color readable on dark background */
+}
+.contact{
+background-color: #181344;    
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+align-items: center;
+gap: 3rem;
+padding-left: 30px;
+margin-top: 130px;
+}
+.contact-text h2{
+font-size: 90px;
+line-height: 1;
+text-align: center;
+}
+.contact-text h2 span{
+color: purple;
+}
+.contact-text h4{
+margin: 15px 0;
+color:rgb(252, 138, 157);
+font-size: 20px;
+font-weight: 600;
+}
+.contact-text p{
+color: pink;
+font-size: 20px;
+line-height: 30px;
+margin-bottom: 2rem;
+}
+.contact-list {
+    margin-bottom: 3rem;
+}
+.contact-list li{
+margin-bottom: 10px;
+display: block;
+}
+.contact-list {
+display: inline-block;
+color: rgb(252, 177, 190);
+font-size: 20px;
+font-weight: 600;
+transition: all .4s ease;
+}
+.contact-list a:hover{
+transform: scale(1.01) translateY(-5px);
+color: plum;
+}
+.contact-icons i{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid palevioletred;
+border-radius: 50%;
+font-size: 20px;
+color: palevioletred;
+text-decoration: none;
+margin: 30px 15px 30px 0;
+transition: .5s ease;
+opacity: 0;
+animation: slideLeft 1s ease forwards;
+animation-delay: cald.2s var(--1);
+}
+.contact-icons i:hover{
+background: #0ef;
+color:plum;
+box-shadow: 0 0 20px #0ef;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align children */
+
+}
+.contact-form form input, form textarea{
+border: none;
+outline: none;
+width: 90%;
+padding: 18px;
+background: rgb(236, 166, 177);
+color: #000;
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+border-radius: 0.5rem;
+}
+.contact-form textarea{
+resize: none;
+height: 220px;
+}
+.contact-form .send{
+display: inline-block;
+padding: 14px 60px;
+background:rgb(209, 0, 35);
+border-radius: 40px;
+font-size: 18px;
+color: plum;
+letter-spacing: 1px;
+text-decoration: none;
+font-weight: 600;
+opacity: 0;
+animation: slideTop 1s ease forwards;
+animation-delay: 2s;
+box-shadow: 0 0 5px purple,
+        0 0 25px burlywood;
+width: fit-content;
+cursor: pointer;
+}
+.contact-form .send:hover{
+    box-shadow:
+        0 0 5px rgb(154, 52, 223),
+        0 0 25px rgb(154, 52, 223),
+        0 0 200px rgb(154, 52, 223);
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+@keyframes animate-path-90 {
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes animate-path-60 {
+  to {
+    stroke-dashoffset: 201;
+  }
+}
+
+@keyframes animate-path-80 {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes animate-path-100 {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.path-90 {
+  stroke-dashoffset: 50;
+  animation: animate-path-90 1s ease forwards;
+}
+.path-65 {
+  stroke-dashoffset: 176;
+  animation: animate-path-65 1s ease forwards;
+}
+.path-75 {
+  stroke-dashoffset: 125;
+  animation: animate-path-75 1s ease forwards;
+}
+.path-85 {
+  stroke-dashoffset: 75;
+  animation: animate-path-85 1s ease forwards;
+}
+@keyframes animate-path-65 { to { stroke-dashoffset: 176; } }
+@keyframes animate-path-75 { to { stroke-dashoffset: 125; } }
+@keyframes animate-path-85 { to { stroke-dashoffset: 75; } }
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes animate-path-90 {
+  to {
+    stroke-dashoffset: 50; /* 502 * (1 - 0.90) = ~50 */
+  }
+}
+@keyframes animate-path-60 {
+  to {
+    stroke-dashoffset: 201; /* 502 * 0.40 = 201 */
+  }
+}
+@keyframes animate-path-80 {
+  to {
+    stroke-dashoffset: 100; /* 502 * 0.20 = 100 */
+  }
+}
+@keyframes animate-path-100 {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+body.projects-page-body {
+      background: #181344;
+      color: peachpuff;
+      font-family: Arial, sans-serif;
+      padding: 90px 10%;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      text-decoration: none;
+      margin: auto;
+    }
+
+    .projects-title {
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: rgb(181, 3, 181);
+      animation: slideTop 1s ease forwards;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid purple;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px purple;
+      animation: slideBottom 1s ease forwards;
+    }
+
+    .project-card h3 {
+      font-size: 28px;
+      color: violet;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 18px;
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
+    .project-video {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px plum;
+    }
+
+    @media (max-width: 768px) {
+      .project-video {
+        height: 250px;
+      }
+
+      .projects-title {
+        font-size: 40px;
+      }
+
+      .project-card h3 {
+        font-size: 22px;
+      }
+
+      .project-card p {
+        font-size: 16px;
+      }
+    }
+.certifications-container {
+  background:plum;
+  padding: 90px 10%;
+  color: peachpuff;
+}
+
+.certifications-title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #fff;
+  animation: slideTop 1s ease forwards;
+}
+
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.certification-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid plum;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px purple;
+  text-align: center;
+  animation: slideBottom 1s ease forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certification-card:hover {
+  transform: translateY(-8px);
+}
+
+.certification-card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 15px;
+}
+
+.certification-card h3 {
+  font-size: 20px;
+  color:#181344;
+  margin-bottom: 10px;
+}
+
+.certification-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0ef;
+  color: #181344;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #0ef;
+  transition: all 0.3s ease-in-out;
+}
+
+.certification-link:hover {
+  background: rgb(182, 0, 182);
+  color: #fff;
+  box-shadow: 0 0 20px plum;
+}
+
+@media (max-width: 768px) {
+  .certifications-title {
+    font-size: 40px;
+  }
+
+  .certification-card h3 {
+    font-size: 18px;
+  }
+}
